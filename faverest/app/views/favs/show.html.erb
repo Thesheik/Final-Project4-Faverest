@@ -1,0 +1,14 @@
+<div class="">
+  <h4>
+    <%= @fav.title %>
+  </h4>
+</div>
+<div class="">
+  <h4>
+    <%= @fav.description %>
+  </h4>
+</div>
+
+<%= link_to 'Home', root_path %>
+<%= link_to 'Edit', edit_fav_path %>
+<%= link_to 'Delete', fav_path, method: :delete, data: { Confirm: "Are you sure?" }%>
