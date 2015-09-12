@@ -9,11 +9,11 @@ class FavsController < ApplicationController
   end
 
   def new
-    @fav = Fav.new
+    @fav = current_user.favs.build
   end
 
   def create
-    @fav = Fav.new(fav_params)
+    @fav = current_user.favs.build(fav_params)
     if @fav.save
       redirect_to @fav, notice: "Successfully created new fav"
     else

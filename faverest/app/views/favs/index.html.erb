@@ -1,9 +1,4 @@
-<h2>Well Hello</h2>
-
-<%= link_to'New Fav',new_fav_path %>
-
+<h2>Welcome</h2>
 <% @favs.each do |fav| %>
-
 <h2> <%= link_to fav.title, fav %> </h2>
-
 <% end %>

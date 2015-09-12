@@ -7,10 +7,47 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<nav class="navbar navbar-default" role="navigation">
+   <div class="navbar-header">
+      <div class="navbar-brand"><%= link_to "Faverest", root_path %></div>
+   </div>
+   <% if user_signed_in? %>
+   <div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><%= link_to "Home", root_path %></li>
+         <li class="active"><%= link_to "New Fav", new_fav_path %></li>
+         <li class="active"><%= link_to "My Favorites", root_path %></li>
+         <li></li>
+         <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               My Account
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+               <li><a href="#">Profile</a></li>
+               <li><%= link_to " Edit Account", edit_user_registration_path %></li>
+               <li><a href="#"></a></li>
+               <li class="divider"></li>
+               <li><a href="#"></a></li>
+               <li class="divider"></li>
+               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            </ul>
+         </li>
+         <% else %>
+         <div>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><%= link_to "Create an Account", new_user_registration_path %></li>
+              <li class="active"><%= link_to "Login",  new_user_session_path %></li>
+              <li class="active"><%= link_to "About Us", new_fav_path %></li>
+              <li class="active"><%= link_to "Contact Us", root_path %></li>
+             </ul>
+          </div>
+       <% end %>
+      </ul>
+   </div>
+</nav>
   <h2 class="notice"><%= notice %></h2>
   <h2 class="alert"><%= alert %></h2>
-
 <%= yield %>
 
 </body>
