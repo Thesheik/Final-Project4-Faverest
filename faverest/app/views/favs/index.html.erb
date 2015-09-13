@@ -1,4 +1,5 @@
 <h2>Welcome</h2>
 <% @favs.each do |fav| %>
+<%= link_to (image_tag fav.image.url(:medium)), fav %>
 <h2> <%= link_to fav.title, fav %> </h2>
 <% end %>
