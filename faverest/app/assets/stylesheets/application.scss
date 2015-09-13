@@ -116,3 +116,90 @@
  textarea {
  	min-height: 250px;
  }
+
+ #menu-search {
+  font-size: 10px;
+  padding: 10px 2px 10px 2px;
+  text-align: top;
+  min-width: 300px;
+  width: 25%;
+  border: solid 1px #fff;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  -webkit-box-shadow: inset 1px 1px 2px 0 #707070;
+  -moz-box-shadow: inset 1px 1px 2px 0 #707070;
+  -o-box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+  -webkit-transition: box-shadow 0.3s;
+  -moz-transition: box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+}
+
+#menu-search:focus {
+  box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+  -webkit-box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+  -moz-box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+  -o-box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+}
+
+#search {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.button1 {
+  text-align: center;
+  min-width: 60px;
+  width: 10%;
+  height: 20%;
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: .9em;
+  text-align: center;
+  font-weight: bold;
+  margin: 1%;
+  color: #e7f3f2;
+  border: 1px solid #ab171e;
+	background-color: #ab171e;
+	border-radius: 3px;
+  background-image: linear-gradient(#d62229, #ab171e);
+	background-image: -webkit-linear-gradient(#d62229, #ab171e);
+}
+
+.button1:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.main{
+height: 500px;
+background-color: rgb(19, 24, 26); color: white;
+}
+
+.btn-default{
+  text-align: center;
+  min-width: 80px;
+  width: 1%;
+  height: 20%;
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: .9em;
+  text-align: center;
+  font-weight: bold;
+  margin: 1%;
+  color: #e7f3f2;
+  border: 1px solid #ab171e;
+	background-color: #ab171e;
+	border-radius: 3px;
+  background-image: linear-gradient(#d62229, #ab171e);
+	background-image: -webkit-linear-gradient(#d62229, #ab171e);
+}
+p{
+  text-align: center;
+}
+
+.jumbotron{
+  height: 550px;
+  background-image:url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSg6JdOy6Qc2DlYkr-902iM8sxbnUS6e8TfVNhUTSz7q0n7kgM);
+  h1, h2{
+    text-align: center;
+    color: white;
+  }
+}

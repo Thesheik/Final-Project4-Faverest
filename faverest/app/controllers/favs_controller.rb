@@ -40,7 +40,6 @@ class FavsController < ApplicationController
   def upvote
     @fav.upvote_by current_user
     redirect_to :back
-
   end
 
   private

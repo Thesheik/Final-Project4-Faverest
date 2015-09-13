@@ -17,6 +17,7 @@
     <div class="panel-footer">
         <div class="row">
           <div class="col-md-6" class="btn-group">
+            <% if user_signed_in? %>
 
             <div class="btn btn-default pull-right">
               <%= link_to 'Edit', edit_fav_path %>
@@ -27,9 +28,11 @@
             </div>
 
             <div class="btn btn-default pull-right">
-              <%= link_to Like_fav_path(@fav), method: :put do %>
+              <%= link_to Like_fav_path (@fav), method: :put do %>
               <span class="glyphicon glyphicon-heart"><%= @fav.get_upvotes.size %></span>
                 <% end %>
+              <% end %>
+
             </div>
           </div>
       </div>
