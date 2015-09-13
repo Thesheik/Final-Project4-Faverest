@@ -1,6 +1,8 @@
 <div class="col-md-6 col-md-offset-3">
-  <h1>Edit Fav</h1>
-  <%= image_tag @fav.image.url(:medium) %>
-  <%= render 'form' %>
-  <%= link_to 'Cancel', fav_path %>
+  <div id="edit_page" class="current_image">
+    <h1>Edit Fav</h1>
+    <%= image_tag @fav.image.url(:medium) %>
+    <%= render 'form' %>
+    <%= link_to 'Cancel', fav_path %>
+  </div>
 </div>

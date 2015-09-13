@@ -1,5 +1,18 @@
 <h2>Welcome</h2>
-<% @favs.each do |fav| %>
-<%= link_to (image_tag fav.image.url(:medium)), fav %>
-<h2> <%= link_to fav.title, fav %> </h2>
-<% end %>
+  <div id="favs" transitions-enabled>
+    <% @favs.each do |fav| %>
+      <div class="box panel panel-default">
+        <br>
+      <%= link_to (image_tag fav.image.url(:medium)), fav %>
+    <div class="panel-body">
+        <h2> <%= link_to fav.title, fav %> </h2>
+        <p>
+          <div class="user">
+            Submitted by
+            <%= fav.user.email %>
+          </div>
+        </p>
+    </div>
+    </div>
+    <% end %>
+</div>
