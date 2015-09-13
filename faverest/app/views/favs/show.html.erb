@@ -26,6 +26,11 @@
               <%= link_to 'Delete', fav_path, method: :delete, data: { Confirm: "Are you sure?" }%>
             </div>
 
+            <div class="btn btn-default pull-right">
+              <%= link_to Like_fav_path(@fav), method: :put do %>
+              <span class="glyphicon glyphicon-heart"><%= @fav.get_upvotes.size %></span>
+                <% end %>
+            </div>
           </div>
       </div>
     </div>
